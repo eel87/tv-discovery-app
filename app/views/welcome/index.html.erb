@@ -1,0 +1,19 @@
+<h1>TV Discovery App</h1>
+<h4>Popular Shows</h1>
+<%  @popular_shows.each do |show| %>
+  <ul class='popular-show-list'>
+    <li><%= show.name %></li>
+  </ul>
+<% end %>
+
+<section class='search-box'>
+<%= form_with(url: "/search", method: "get") do %>
+  <%= label_tag(:search, "Search for a show:") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search") %>
+<% end %>
+</section>
+
+<%# <% @results.each do |result| %> 
+  <%# <%= result.name %> 
+<%# <% end %> 

@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# https://api.themoviedb.org/3/movie/76341?api_key=fb6a1d3f38c3d97f67df6d141f936f29
