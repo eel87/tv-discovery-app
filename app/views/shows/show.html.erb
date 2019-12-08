@@ -1,0 +1,14 @@
+<%= image_tag "#{@config.base_url}w500#{@show['backdrop_path']}" %>
+
+<h1><%= @show['name'] %><h1>
+<h4>Overview:
+<%= @show['overview'] %></h4>
+
+<section class='cast'>
+Created by:
+<ul>
+<% @show['created_by'].each do |hash| %>
+  <li 'list-style-type: none;' ><%= "#{hash['name']}\n " %></li>
+<% end %>
+</ul>
+</section>

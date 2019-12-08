@@ -1,6 +1,7 @@
 <h1>Search Results</h1>
-<section class='search-results-div'>
-<ul><% @search_results.each do |result| %></ul>
- <li><%= result.name %></li>
-<% end %>
+
+<section class='search-results'>
+  <ul><% @search_results.each do |result| %></ul>
+    <li><%= link_to result.name, show_path(result.id) %></li>
+  <% end %>
 </section>

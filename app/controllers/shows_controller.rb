@@ -4,6 +4,9 @@ class ShowsController < ApplicationController
   end
 
   def show
-    @search_results
+    @show = Tmdb::TV.detail(params[:id])
+    @images = Tmdb::TV.images(params[:id])
+    
+    @config = Tmdb::Configuration.new
   end
 end
