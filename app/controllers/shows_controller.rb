@@ -1,12 +1,10 @@
 class ShowsController < ApplicationController
   def index
-    @search_results = Tmdb::TV.find(params[:name])
+    @search_results = @tmdb.search(params[:name])
   end
 
   def show
-    @show = Tmdb::TV.detail(params[:id])
-    @images = Tmdb::TV.images(params[:id])
-    
-    @config = Tmdb::Configuration.new
+    @show = @tmdb.get_details(params[:id])
+    @images = @tmdb.get_images(params[:id])
   end
 end

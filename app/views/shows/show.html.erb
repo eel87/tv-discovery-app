@@ -4,11 +4,25 @@
 <h4>Overview:
 <%= @show['overview'] %></h4>
 
-<section class='cast'>
+<section class='details'>
 Created by:
 <ul>
 <% @show['created_by'].each do |hash| %>
-  <li 'list-style-type: none;' ><%= "#{hash['name']}\n " %></li>
+  <li><%= "#{hash['name']}\n " %></li>
 <% end %>
 </ul>
+<ul>
+<%= "Number of seasons:" %>
+<%= @show['seasons'].count %>
+<%# <% @show['seasons'].each do |season| %>
+  <%# <li><%= "#{season['name']}: #{season['overview']}"</li> %>
+<%# <% end %>
+</ul> 
+Genre:
+<% @show['genres'].each do |genre| %>
+  <%= "#{genre['name']}\n" %>
+<% end %>
+Popularity: <%= @show['popularity'] %>
 </section>
+
+<%= @show.keys %> 

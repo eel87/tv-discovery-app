@@ -1,9 +1,7 @@
 <h1>TV Discovery App</h1>
 <h4>Popular Shows</h1>
 <%  @popular_shows.each do |show| %>
-  <ul class='popular-show-list'>
-    <li><%= show.name %></li>
-  </ul>
+  <ul><li><%= show.name %></li></ul>
 <% end %>
 
 <%= form_tag(shows_path, :method => "get", class: "form") do %>

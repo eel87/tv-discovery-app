@@ -1,3 +1,2 @@
 class ShowsModel < ApplicationRecord
-
 end
