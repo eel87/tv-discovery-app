@@ -6,6 +6,7 @@ class TmdbService < ApplicationRecord
 
   # setup default language
   Tmdb::Api.language("en")
+
   def get_popular_shows
     Tmdb::TV.popular
   end

@@ -1,4 +1,6 @@
-<%= image_tag "#{@config.base_url}w500#{@show['backdrop_path']}" %>
+<% if @show['backdrop_path'] != nil %>
+  <%= image_tag "#{@config.base_url}w500#{@show['backdrop_path']}" %>
+<% end %>
 
 <h1><%= @show['name'] %><h1>
 <h4>Overview:
@@ -25,4 +27,4 @@ Genre:
 Popularity: <%= @show['popularity'] %>
 </section>
 
-<%= @show.keys %> 
+<%= @show %> 
