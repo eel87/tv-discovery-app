@@ -1,10 +1,7 @@
-require_relative '../spec_helper'
-require_relative '../../app/services/tmdb_service'
-require 'themoviedb'
+require 'rails_helper'
 
-Tmdb::Api.key("#{ENV['API_KEY']}")
-
-RSpec.describe TmdbService, :type => :model do
+RSpec.describe TmdbService, type: :model do
+  
   let(:service) { TmdbService.new }
   let(:random) { rand(12) }
 
@@ -35,5 +32,4 @@ RSpec.describe TmdbService, :type => :model do
   it "gets details of show equal to Tmdb details" do
     expect(service.get_details(random)).to eq(Tmdb::TV.detail(random))
   end
-
 end
