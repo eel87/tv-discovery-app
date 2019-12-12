@@ -1,30 +1,52 @@
-<% if @show['backdrop_path'] != nil %>
-  <%= image_tag "#{@config.base_url}w500#{@show['backdrop_path']}" %>
-<% end %>
-
-<h1><%= @show['name'] %><h1>
-<h4>Overview:
-<%= @show['overview'] %></h4>
-
-<section class='details'>
-Created by:
-<ul>
-<% @show['created_by'].each do |hash| %>
-  <li><%= "#{hash['name']}\n " %></li>
-<% end %>
-</ul>
-<ul>
-<%= "Number of seasons:" %>
-<%= @show['seasons'].count %>
-<%# <% @show['seasons'].each do |season| %>
-  <%# <li><%= "#{season['name']}: #{season['overview']}"</li> %>
-<%# <% end %>
-</ul> 
-Genre:
-<% @show['genres'].each do |genre| %>
-  <%= "#{genre['name']}\n" %>
-<% end %>
-Popularity: <%= @show['popularity'] %>
+<section class="container-fluid">
+  <div class="row main-title title">
+    <h1>"<%= @show['name'] %>"<h1>
+  </div>
 </section>
 
-<%= @show %> 
+<div class="container">
+  <div class="row">
+    <div class="col-4 poster align-self-center">
+      <% if @show['backdrop_path'] != nil %>
+        <%= image_tag "#{@config.base_url}w342#{@show['backdrop_path']}", class: "poster-image" %>
+      <% end %>
+        <div class="col overview">
+          <strong>Overview:</strong><br>
+          <%= @show['overview'] %>
+        </div>
+    </div>
+    <div class="col-4 cast">
+      <ul class="cast-list"><strong>Cast:</strong>
+        <% @cast.each do |cast| %>
+          <li class="cast-item"><%= cast['character'] %>: <%= cast['name'] %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-3 quick-facts">
+      <strong>Quick Facts:</strong>
+      <ul>
+      <li class="facts"><strong>First Air Date:</strong>
+        <%= @show['first_air_date'] %>
+      </li>
+      <li class="facts"><strong>Last Air Date:</strong>
+        <%= @show['last_air_date'] %>
+      </li>
+      <li class="facts"><strong>Created by:</strong>
+          <% @show['created_by'].each do |person| %>
+            <li><%= person['name'] %></li>
+          <% end %>
+      </li>
+      <li class="facts"><strong>Number of Seasons:</strong>
+          <%= @show['seasons'].count %>
+      </li>
+      <li class="facts"><strong>Genre:</strong>
+        <% @show['genres'].each do |genre| %>
+          <li><%= genre['name'] %></li>
+        <% end %>
+      </li>
+      <li class="facts"><strong>Vote Average:</strong>
+        <%= @show['vote_average'] %>
+      </li>
+    </div>
+  </div>
+</div>

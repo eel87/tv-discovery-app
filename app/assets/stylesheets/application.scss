@@ -11,4 +11,130 @@
  * It is generally better to create a new file per style scope.
 */ 
 
- @import "bootstrap";
+@import "bootstrap";
+
+body {
+  background:#ebf2fc;
+  font-family: 'Merriweather', serif;
+}
+
+.main-title {
+  background:#f2f3f5;
+  padding: 10px;
+  border-bottom: 1px dotted black;
+}
+
+.title {
+  font-family: 'Francois One', sans-serif;
+}
+
+.popular-shows-list {
+  background:#f2f3f5;
+  overflow: hidden;
+  padding: 25px;
+  border: 1px dotted black;
+  text-decoration: underline;
+}
+
+.popular-shows-list, .search-results {
+  position: relative;
+  // font-family: 'Merriweather', serif;
+  font-size: 15px;
+}
+
+.vertical-center {
+  min-height: 50%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 50vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  position: relative;
+  margin: auto;
+}
+
+.form {
+  background: white;
+  border: 1px dotted black;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.pop li {
+  float: left;
+  padding: 0 10px;
+  margin-bottom: 2px;
+}
+
+.pop li:last-child {
+  color: #f2f3f5;
+}
+
+.search-results {
+  margin-top: 10px;
+}
+
+.no-results-container {
+  background: #f2f3f5;
+  border: 1px dotted black;
+  margin: auto;
+  padding: 15px;
+}
+
+.no-results {
+  justify-content: space-evenly;
+}
+
+.quick-facts, .poster {
+  margin-top: 20px;
+  padding-top: 15px;
+  border: 0.2px dotted black;
+  background-color:#f2f3f5;
+  justify-content: space-evenly;
+  margin-left: 15px;
+}
+
+.overview {
+  margin-top: 20px;
+}
+
+.cast {
+  margin-top: 20px;
+  margin-left: 15px;
+  padding-top: 15px;
+  border: 0.2px dotted black;
+  background-color:#f2f3f5;
+}
+
+ul { 
+  margin: 0; padding: 0; 
+}
+
+ul.cast-list {
+  margin: auto;
+}
+
+li.cast-item  {
+  border-top: 1px solid #ddd;
+  padding: 2px;
+}
+
+li.cast-item:first-child {
+  border-top: none;
+}
+
+.quick-facts li.facts {
+  border-top: 1px solid #ddd;
+  padding: 2px;
+}
+// font-family: 'Merriweather', serif;
+// font-family: 'Oswald', sans-serif;
+
