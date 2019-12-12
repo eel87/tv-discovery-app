@@ -11,9 +11,7 @@ Similarly, the `shows_controller`'s `index` method gets search results based on 
 
 
 Reasoning behind your technical choices. This may include trade-offs you might have made, anything you left out, and what you might do differently if you had more time to spend on the project.
-- Ruby on Rails - familiarity and RSpec
-- Not as easy to include accessibility in Rails
-- left out rspec views tests
-What I would do different:
-  - include all accessibility
-  - rspec views tests
+---
+I chose to use Ruby on Rails for my project because I am familiar with it, and have the most experience running tests with RSpec.  I also wanted to build the app using the MVC architecture and again, I have the most experience with this using Rails. I used Bootstrap for styling my page for ease of mobile friendliness.
+
+If I had more time, I would have included full accessibility to screen readers using WAI-ARIA. This is something that is very important to me and unfortunetly didn't have time to implement fully. I also would've implemented tests for the Views pages in my app. I began the process but ultimately didn't have enough time to implement what was necessary.

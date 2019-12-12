@@ -4,7 +4,7 @@
   </div>
 </section>
 
-<div class="container">
+<section class="container">
   <div class="row">
     <div class="col-4 poster align-self-center">
       <% if @show['backdrop_path'] != nil %>
@@ -49,9 +49,9 @@
       </li>
     </div>
   </div>
-</div>
+</section>
 
-<div class="container">
+<section class="container">
   <div class="row search-bar vertical-center">
     <div class="col-6 container form">
       <%= form_tag(shows_path, :method => "get") do %>
@@ -69,4 +69,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

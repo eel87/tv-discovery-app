@@ -4,31 +4,31 @@
   </div>
 <section>
 
-<div class="container">
+<section class="container">
   <div class="row search-bar vertical-center">
     <div class="col-6 container form">
-        <%= form_tag(shows_path, :method => "get") do %>
-        <div class='form-group' aria-hidden='true'>
-          <%= text_field_tag(:name, params[:name], class: "form-control", placeholder: "Search TV Shows") %>
-        </div>
-        <div class='form-group' aria-hidden='true'>
-          <%= submit_tag("Find a Show!", class: "btn btn-success") %>
-        </div>
-          <% end %>
+      <%= form_tag(shows_path, :method => "get") do %>
+      <div class='form-group' aria-hidden='true'>
+        <%= text_field_tag(:name, params[:name], class: "form-control", placeholder: "Search TV Shows") %>
+      </div>
+      <div class='form-group' aria-hidden='true'>
+        <%= submit_tag("Find a Show!", class: "btn btn-success") %>
+      </div>
+      <% end %>
     </div>
   </div>
 
-  <div class="row">
+  <section class="row">
     <div class="col popular-shows-list">
       <div class="title"><h3>Popular Shows</h3></div>
-      <ul class="pop">
-      <%  @popular_shows.each do |show| %>
-        <li class="pop"><%= link_to show.name, show_path(show.id) %>
-        <li class="pop"> | </li>
-      <% end %>
-      </ul>
+        <ul class="pop">
+        <%  @popular_shows.each do |show| %>
+          <li class="pop"><%= link_to show.name, show_path(show.id) %>
+          <li class="pop"> | </li>
+        <% end %>
+        </ul>
+      </div>
     </div>
-  </div>
-
-</div>
+  </section>
+</section>
 
