@@ -5,6 +5,8 @@ development:
   pool: 5
   timeout: 5000
   host: localhost
+  username: postgres
+  password: 092788
   port: 5432
 
 test:
@@ -13,4 +15,7 @@ test:
   database: tv_app_test
   pool: 5
   timeout: 5000
-  
+  host: localhost
+  username: postgres
+  password: 092788
+  port: 5432
