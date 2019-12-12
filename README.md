@@ -2,7 +2,7 @@
 
 Problem: 
 Create a full-stack "tv discovery app" that communicates with The Movie Database API for data.  The app must render a list of popular shows on the home page, be capable of searching for shows and returning details of specific shows.
-
+---
 Solution:
 Using Ruby on Rails, I used MVC architecture to build my app.
 I created a model `TmdbService` to communicate with the Movie Database API. I installed `themoviedb` ruby gem to allow for cleaner and simpler code in the model. The `TmbdService` model serves to get data from the API and communicate with controllers.
@@ -14,4 +14,4 @@ Reasoning behind your technical choices. This may include trade-offs you might h
 ---
 I chose to use Ruby on Rails for my project because I am familiar with it, and have the most experience running tests with RSpec.  I also wanted to build the app using the MVC architecture and again, I have the most experience with this using Rails. I used Bootstrap for styling my page for ease of mobile friendliness.
 
-If I had more time, I would have included full accessibility to screen readers using WAI-ARIA. This is something that is very important to me and unfortunetly didn't have time to implement fully. I also would've implemented tests for the Views pages in my app. I began the process but ultimately didn't have enough time to implement what was necessary.
+If I had more time, I would have included full accessibility to screen readers using WAI-ARIA. This is something that is very important to me and unfortunately didn't have time to implement fully. I also would've implemented tests for the Views pages in my app. I began the process but ultimately didn't have enough time to implement what was necessary. I also would've included a button to return to the home page from the `shows/id` details page.
