@@ -250,7 +250,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3 (~> 1.4.1)
   themoviedb
   turbolinks (~> 5)
   tzinfo-data
