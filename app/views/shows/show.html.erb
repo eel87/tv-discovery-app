@@ -50,3 +50,23 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row search-bar vertical-center">
+    <div class="col-6 container form">
+      <%= form_tag(shows_path, :method => "get") do %>
+      <div class='form-group' aria-hidden='true'>
+        <%= text_field_tag(:name, params[:name], class: "form-control", placeholder: "Search TV Shows") %>
+      </div>
+      <div class='form-group' aria-hidden='true'>
+        <%= submit_tag("Find a Show!", class: "btn btn-success") %>
+      </div>
+      <% end %>
+      <div class="row">
+        <div class="col">
+          <%= link_to 'Back', url_for(:back), class: 'btn btn-primary back', 'aria-label': "back button" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

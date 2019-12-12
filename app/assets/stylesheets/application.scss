@@ -16,6 +16,7 @@
 body {
   background:#ebf2fc;
   font-family: 'Merriweather', serif;
+  margin-bottom: 20px;
 }
 
 .main-title {
@@ -38,7 +39,6 @@ body {
 
 .popular-shows-list, .search-results {
   position: relative;
-  // font-family: 'Merriweather', serif;
   font-size: 15px;
 }
 
@@ -51,7 +51,6 @@ body {
 }
 
 .search-bar {
-  position: relative;
   margin: auto;
 }
 
@@ -89,8 +88,12 @@ ul {
   padding: 15px;
 }
 
-.no-results {
+.no-results, .back {
   justify-content: space-evenly;
+}
+
+.back {
+  margin-top: 15px;
 }
 
 .quick-facts, .poster {
@@ -104,6 +107,7 @@ ul {
 
 .overview {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .cast {
@@ -135,6 +139,4 @@ li.cast-item:first-child {
   border-top: 1px solid #ddd;
   padding: 2px;
 }
-// font-family: 'Merriweather', serif;
-// font-family: 'Oswald', sans-serif;
 

@@ -23,7 +23,7 @@
       <div class="title"><h3>Popular Shows</h3></div>
       <ul class="pop">
       <%  @popular_shows.each do |show| %>
-        <li class="pop"><%= show.name %>
+        <li class="pop"><%= link_to show.name, show_path(show.id) %>
         <li class="pop"> | </li>
       <% end %>
       </ul>
