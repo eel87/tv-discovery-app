@@ -19,3 +19,14 @@ test:
   username: postgres
   password: 092788
   port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: tv_app_test
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username: postgres
+  password: 092788
+  port: 5432
