@@ -22,4 +22,8 @@ class TmdbService < ApplicationRecord
   def get_images(id)
     Tmdb::TV.images(id)
   end
+
+  def get_cast(id)
+    Tmdb::TV.cast(id)
+  end
 end
